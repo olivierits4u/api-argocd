@@ -22,6 +22,9 @@ spec:
           emptyDir: {}
       containers:
         - name: microservice-pod 
+          volumeMounts:
+          - mountPath: /config
+            name: volume-qnl65
            
           readinessProbe:
             httpGet:
@@ -36,4 +39,12 @@ spec:
           imagePullPolicy: Always
           
           image: quay.io/olivier_castanos/ipa
+ 
       restartPolicy: Always
+      volumes:
+      - emptyDir: {}
+        name: emptydirlogs
+      - configMap:
+          defaultMode: 420
+          name: api-argocd-cm
+        name: volume-qnl65
