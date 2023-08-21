@@ -110,11 +110,7 @@ spec:
       taskRef:
         kind: ClusterTask
         name: openshift-client
-      when:
-        - input: $(tasks.maven-get-pom-version.results.current-pom-version)
-          operator: in
-          values:
-            - $(tasks.get-app-version.results.current-app-version)
+       
   workspaces:
     - name: source
     - name: maven-settings
