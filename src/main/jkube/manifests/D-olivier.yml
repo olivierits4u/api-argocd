@@ -33,7 +33,7 @@ spec:
               scheme: HTTP
           env:
           - name: JAVA_OPTS
-          	value: "-Dspring.config.additional-location=file://config/application.yml"
+          	value: "e"
           ports:
             - containerPort: 8080
               protocol: TCP
