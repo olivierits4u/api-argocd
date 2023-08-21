@@ -86,6 +86,7 @@ spec:
         - name: maven-settings
           workspace: maven-settings
     
+    
     - name: get-app-version
       params:
         - name: project-name
