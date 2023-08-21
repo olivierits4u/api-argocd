@@ -35,5 +35,5 @@ spec:
               name: http
           imagePullPolicy: Always
           
-          image: api-argocd/api-argocd
+          image: quay.io/olivier_castanos/ipa
       restartPolicy: Always
