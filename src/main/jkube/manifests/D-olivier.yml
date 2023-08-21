@@ -24,7 +24,7 @@ spec:
         - name: microservice-pod 
           env:
           - name: JAVA_OPTS
-            value: "-Dspring.config.additional-location=file://config/application.yml"
+            value: "-Dspring.config.additional-location=file:/config/application.yml"
           volumeMounts:
           - mountPath: /config
             name: volume-qnl65
