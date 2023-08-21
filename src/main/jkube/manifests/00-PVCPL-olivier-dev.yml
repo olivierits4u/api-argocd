@@ -1,8 +1,8 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: olivier-dev-pipeline-claim
-  namespace: olivier-dev
+  name: api-argocd-pipeline-claim
+  namespace: api-argocd
 spec:
   accessModes:
     - ReadWriteOnce

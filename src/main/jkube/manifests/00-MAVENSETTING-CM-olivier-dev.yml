@@ -1,8 +1,8 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: olivier-dev-maven-settings-cm
-  namespace: olivier-dev
+  name: api-argocd-maven-settings-cm
+  namespace: api-argocdapi-argocd
   labels:
     app.kubernetes.io/instance: cluster-configs
 data:
