@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: api-argocd-pipeline-tag
-  namespace: api-argocdapi-argocd
+  namespace: api-argocd
 spec:
   params:
     - name: project-name
