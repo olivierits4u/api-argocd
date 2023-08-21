@@ -1,0 +1,39 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: api-argocd
+   
+  name: api-argocd
+  labels:
+    app: api-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-argocd
+  template:
+    metadata:
+      name: api-argocd
+      labels:
+        app: api-argocd
+    spec:
+      volumes:
+        - name: emptydirlogs
+          emptyDir: {}
+      containers:
+        - name: microservice-pod 
+           
+          readinessProbe:
+            httpGet:
+              path: actuator/health
+              port: 8080
+              scheme: HTTP
+          
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+              name: http
+          imagePullPolicy: Always
+          
+          image: api-argocd/api-argocd
+      restartPolicy: Always
